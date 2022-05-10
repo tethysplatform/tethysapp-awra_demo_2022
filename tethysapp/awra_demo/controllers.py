@@ -45,10 +45,6 @@ class AwraMapLayout(MapLayout):
             extent=self.initial_map_extent,
             plottable=True,
         )
-        
-        layers=[sites_layer]
-        
-        map_view.layers.extend(layers)
 
         # Create Layer Groups
         layer_groups = [
@@ -56,7 +52,7 @@ class AwraMapLayout(MapLayout):
                 id='nwis-layers',
                 display_name='Gages',
                 layer_control='radio',
-                layers=layers,
+                layers=[sites_layer],
             ),           
         ]
 
